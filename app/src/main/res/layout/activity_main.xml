@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/unpress_bg">
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:padding="10dp"
+        android:background="@color/app_bg"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/day"
+            style="@style/PostureReportsTitle"
+            android:background="@drawable/button_report_left_selector"
+            android:text="日"
+            android:checked="true"
+            />
+        <RadioButton
+            android:id="@+id/week"
+            android:textColor="@drawable/text_color_selector"
+            style="@style/PostureReportsTitle"
+            android:background="@drawable/button_report_center_selector"
+            android:text="周" />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/app_color"/>
+        <RadioButton
+            android:id="@+id/month"
+            style="@style/PostureReportsTitle"
+            android:background="@drawable/button_report_center_selector"
+            android:text="月" />
+        <RadioButton
+            android:id="@+id/year"
+            style="@style/PostureReportsTitle"
+            android:background="@drawable/button_report_right_selector"
+            android:text="年" />
+    </RadioGroup>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:padding="10dp">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/posture_report_frame"/>
+        <com.zoe.report.view.PostureReportsWidget
+            android:id="@+id/posture_reports_widget"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"/>
+    </FrameLayout>
+
+</LinearLayout>
